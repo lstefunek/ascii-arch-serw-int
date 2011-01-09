@@ -37,4 +37,3 @@ User - klient:
 - intuicyjny i ergonomiczny interfejs użytkownika
 - informacja o dostepności produktu (by nie kupić go gdy jest "niedostępny")
 - możliwość kontaktu ze sklepem (e-mail, formularz kontaktowy)
-
