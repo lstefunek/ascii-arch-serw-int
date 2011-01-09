@@ -27,4 +27,8 @@ Celem naszego projektu jest stworzenie prostego w obsłudze sklepu internetowego
 - wyświetlanie szczegółów dotyczących interesująceg nas produktu
 - dodawanie produktów do koszyka
 - wyszukiwanie produktów.
-- przeglądanie koszyka 
+- przeglądanie koszyka.
+- Check out - wybór sposobu płatności i dostawy
+- płatnosć - przelew, przy odbiorze, karta visa (jeśli starczy czasu)
+- intuicyjny i ergonomiczny interfejs użytkownika
+- informacja o dostepności produktu (by nie kupić go gdy jest "niedostępny"
