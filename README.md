@@ -16,7 +16,7 @@ CEL:
 Celem naszego projektu jest stworzenie prostego w obsłudze sklepu internetowego z podstawowymi funkcjonalnościami(opisanymi poniżej).
 
 
-FUNKCJONALNOŚCI:
+[FUNKCJONALNOŚCI]
 
 Admin - właściciel:
 - dodawanie produktów
