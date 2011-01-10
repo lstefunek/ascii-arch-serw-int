@@ -9,6 +9,7 @@ gem 'responders'
 gem 'simple_form'
 gem "paperclip", "~> 2.3"
 gem "quick_magick"
+gem "authlogic"
 
 group :development do
   gem 'wirble'
