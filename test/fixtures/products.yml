@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  body: MyText
+  price: 1.5
+  count: 1
+
+two:
+  body: MyText
+  price: 1.5
+  count: 1

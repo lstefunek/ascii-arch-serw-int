@@ -7,6 +7,7 @@ gem 'unicorn'
 gem 'nifty-generators'
 gem 'responders'
 gem 'simple_form'
+gem "paperclip", "~> 2.3"
 
 group :development do
   gem 'wirble'
