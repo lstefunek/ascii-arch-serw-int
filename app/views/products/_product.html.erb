@@ -1,7 +1,8 @@
 <p>
-	<%= product.name %> (<%= product.price %> zł)
+	<%= product.name %> (<%= product.price %> zł)<br/>
   <%= link_to "Show", product_path(product) %> | 
   <%= link_to "Edit", edit_product_path(product) %> |
-  <%= link_to "Delete", product_path(product), :confirm => "Are you sure?", :method => :delete %>
+  <%= link_to "Delete", product_path(product), :confirm => "Are you sure?", :method => :delete %><br/>
+  <%= image_tag product.photo.url(:small) %>
 </p>
 

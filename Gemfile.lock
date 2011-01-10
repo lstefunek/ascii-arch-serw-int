@@ -51,6 +51,7 @@ GEM
       activerecord
       activesupport
     polyglot (0.3.1)
+    quick_magick (0.8.0)
     rack (1.2.1)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
@@ -94,6 +95,7 @@ DEPENDENCIES
   jquery-rails
   nifty-generators
   paperclip (~> 2.3)
+  quick_magick
   rails
   responders
   simple_form

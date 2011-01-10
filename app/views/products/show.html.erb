@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h2><%= @product.name %></h2>
+<p><%= image_tag @product.photo.url(:small) %></p>
 <p><b>Body:</b> <%= @product.body %></p>
 <p><b>Price:</b> <%= @product.price %></p>
 

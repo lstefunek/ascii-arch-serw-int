@@ -8,6 +8,7 @@ gem 'nifty-generators'
 gem 'responders'
 gem 'simple_form'
 gem "paperclip", "~> 2.3"
+gem "quick_magick"
 
 group :development do
   gem 'wirble'
