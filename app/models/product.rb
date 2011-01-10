@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+	belongs_to :category
+		
 	has_attached_file :photo, :styles => { :small => "150x150>" }, :url => "/assets/products/:id/:style/:basename.:extension", :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension" 
 	
 	validates_length_of :name, :minimum => 10
@@ -6,6 +8,8 @@ class Product < ActiveRecord::Base
 	
 	validates_numericality_of :price, :greater_than => 0
 	validates_numericality_of :count, :greater_than_or_equal_to => 0
+	
+	validates_associated :category
 	
 	validates_attachment_presence :photo  
   validates_attachment_size :photo, :less_than => 5.megabytes  

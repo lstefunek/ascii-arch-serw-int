@@ -1,0 +1,10 @@
+pl:
+  flash:
+    actions:
+      create:
+        notice: '%{resource_name} został‚ poprawnie dodany.'
+      update:
+        notice: '%{resource_name} został‚ poprawnie zaktualizowany.'
+      destroy:
+        notice: '%{resource_name} został‚ poprawnie usunięty.'
+        alert: '%{resource_name} nie mógł‚ zostać usunięty.'

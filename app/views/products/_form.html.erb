@@ -1,9 +1,10 @@
 <%= simple_form_for @product, :html => { :multipart => true } do |f| %>
-	<%= f.input :name %>
-	<%= f.input :body, :input_html => { :cols => 57, :rows => 8} %>
-	<%= f.input :price, :hint => "prices should be in PLN" %>
-	<%= f.input :count %>
-	<%= f.label :photo, "Photo" %>
+	<%= f.input :name, :required => true %>
+	<%= f.input :body, :input_html => { :cols => 57, :rows => 8}, :required => true %>
+	<%= f.input :price, :hint => "ceny powinny być w PLN", :required => true %>
+	<%= f.input :count, :required => true %>
+	<%= f.association :category, :collection => Category.all(:order => 'name'), :required => true %>
+	<%= f.label :photo %>
 	<%= f.file_field :photo %> 
 	<br/><br/>
 	<%= f.button :submit %>

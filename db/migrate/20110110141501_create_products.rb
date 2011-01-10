@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :body
       t.float :price
       t.integer :count
+      t.references :category
 
       t.timestamps
     end
