@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(:version => 20110110141553) do
 
   create_table "products", :force => true do |t|
+    t.string   "name"
     t.text     "body"
     t.float    "price"
     t.integer  "count"

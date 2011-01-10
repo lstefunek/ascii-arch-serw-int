@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
+Product.create( :name => "CorelDraw Graphics Suite X5 PL - Home & Student", :body => "", :price => 359, :count => 100)
+Product.create( :name => "Adobe Photoshop CS5 PL WIN BOX", :body => "", :price => 3199, :count => 49)
+Product.create( :name => "Microsoft Windows 7 Home Premium PL BOX", :body => "", :price => 749, :count => 10)
+Product.create( :name => "Microsoft Windows 7 Ultimate PL BOX", :body => "", :price => 1219, :count => 32 )
+Product.create( :name => "Microsoft Visual Studio Pro 2010 Win32 English BOX", :body => "", :price => 3999, :count => 0)
