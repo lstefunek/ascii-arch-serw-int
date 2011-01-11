@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @product.name %></h2>
+<h2>
+	<%= @product.name %>
+	<% if current_user %>
+		(<%= link_to "Add", product_add_path(@product) %>)
+	<% end %>
+</h2>
 <p><%= image_tag @product.photo.url(:small) %></p>
 <p><b>Body:</b> <%= @product.body %></p>
 <p><b>Price:</b> <%= @product.price %> PLN</p>
