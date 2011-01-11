@@ -1,7 +1,26 @@
-<%= simple_form_for(@user) do |f| %>
-	<%= f.input :username, :required => true %>
-	<%= f.input :email, :required => true %>
-	<%= f.input :password, :required => true %>
-	<%= f.input :password_confirmation, :required => true %>
-	<%= f.button :submit %> 
+<%= semantic_form_for @user do |f| %>
+
+	<%= f.inputs "Dane konta" do %>
+		<%= f.input :username, :required => true %>
+		<%= f.input :email, :required => true %>
+		<%= f.input :password, :required => true %>
+		<%= f.input :password_confirmation, :required => true %>
+	<% end %>
+	
+	<%= f.semantic_fields_for :customer, @customer || Customer.new do |c| %>
+		<%= c.inputs "Personalia" do %>
+			<%= c.input :name %>
+			<%= c.input :surname %>
+			<%= c.input :town %>
+			<%= c.input :zipcode %>
+			<%= c.input :street %>
+			<%= c.input :streetnumber %>
+			<%= c.input :housenumber %>
+			<%= c.input :phone %>
+		<% end %>
+	<% end %>
+	
+	<% f.buttons do %>
+		<%= f.commit_button %>
+	<% end %>
 <% end %>

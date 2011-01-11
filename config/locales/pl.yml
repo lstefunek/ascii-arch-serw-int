@@ -147,6 +147,9 @@ pl:
     models:
       product: "Produkt"
       category: "Kategoria"
+      user: "Użytkownik"
+      customer: "Klient"
+      user_session: "sesja użytkownika"
     attributes:
       product:
         name: "Nazwa"
@@ -157,6 +160,24 @@ pl:
         photo: "Ikona"
       category:
         name: "Nazwa"
+      user:
+        username: "Nazwa"
+        email: "E-mail"
+        password: "Hasło"
+        password_confirmation: "Hasło (Powtórz)"
+      user_session:
+        username: "Login"
+        password: "Hasło"
+      customer:
+        name: "Imie"
+        surname: "Nazwisko"
+        town: "Miasto"
+        zipcode: "Kod pocztowy"
+        street: "Ulica"
+        streetnumber: "Numer ulicy"
+        housenumber: "Numer domu"
+        phone: "Telefon"
+      
 
   support:
     array:
@@ -167,3 +188,8 @@ pl:
       last_word_connector: " i "
     select:
       prompt: "Proszę wybrać:"
+      
+  formtastic:
+    actions:
+      create: "OK"
+      update: "Zapisz"

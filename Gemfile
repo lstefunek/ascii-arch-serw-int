@@ -10,6 +10,8 @@ gem 'simple_form'
 gem "paperclip", "~> 2.3"
 gem "quick_magick"
 gem "authlogic"
+gem "cancan"
+gem 'formtastic'
 
 group :development do
   gem 'wirble'

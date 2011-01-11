@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+	load_and_authorize_resource
+
   # GET /products
   # GET /products.xml
   def index
