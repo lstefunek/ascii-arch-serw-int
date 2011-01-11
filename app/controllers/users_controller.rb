@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-    @user.customer = Customer.new
     respond_with(@user)
   end
 
@@ -15,15 +14,14 @@ class UsersController < ApplicationController
   
   def edit
   	@user = current_user
+  	@customer = Customer.find @user.customer
   end
   
   def update
   	@user = current_user
-  	if @user.update_attributes(params[:user])
-  		redirect_to root_url
-  	else
-  		render :action => 'edit'
-  	end
+  	@user.update_attributes(params[:user])
+  	@user.save
+  	redirect_to root_url
   end
 
 end

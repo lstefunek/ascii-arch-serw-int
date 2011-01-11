@@ -1,5 +1,9 @@
 AsciiArchSerwInt::Application.routes.draw do |map|
 
+  resources :orderlines
+
+  resources :orderinfos
+
   resources :customers
 
 	map.login 'login', :controller => 'user_sessions', :action => 'new'
