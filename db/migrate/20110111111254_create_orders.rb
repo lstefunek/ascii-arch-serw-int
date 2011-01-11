@@ -1,7 +1,7 @@
 class CreateOrders < ActiveRecord::Migration
   def self.up
     create_table :orders do |t|
-      t.references :customer
+			t.references :user
 
       t.timestamps
     end
