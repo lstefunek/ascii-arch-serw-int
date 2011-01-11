@@ -3,11 +3,11 @@ ASCII
 
 Autorzy
 -------
-Ariel Burlingo
-Radosław Kwolek
-Łukasz Lewczyński
-Łukasz Stefański
-Maciej Wiszowaty
+-		Ariel Burlingo
+-		Radosław Kwolek
+-		Łukasz Lewczyński
+-		Łukasz Stefański
+-		Maciej Wiszowaty
 
 Temat
 -----
