@@ -149,7 +149,7 @@ pl:
       category: "Kategoria"
       user: "Użytkownik"
       customer: "Klient"
-      user_session: "sesja użytkownika"
+      user_session: "Sesja użytkownika"
     attributes:
       product:
         name: "Nazwa"

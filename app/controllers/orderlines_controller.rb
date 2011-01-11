@@ -1,2 +1,0 @@
-class OrderlinesController < ApplicationController
-end
