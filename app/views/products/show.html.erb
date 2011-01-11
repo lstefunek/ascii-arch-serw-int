@@ -2,7 +2,7 @@
 
 <h2>
 	<%= @product.name %>
-	<% if current_user %>
+	<% if current_user && @product.count > 0 %>
 		(<%= link_to "Add", product_add_path(@product) %>)
 	<% end %>
 </h2>
@@ -10,5 +10,9 @@
 <p><b>Body:</b> <%= @product.body %></p>
 <p><b>Price:</b> <%= @product.price %> PLN</p>
 <p><b>Category:</b> <%= link_to @product.category.name, @product.category %></p>
+
+<% if @product.count == 0 %>
+	<p><b>BRAK TOWARU</b></p>
+<% end %>
 
 <%= link_to 'Back', products_path %>

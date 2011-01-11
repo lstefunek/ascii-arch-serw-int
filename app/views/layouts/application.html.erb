@@ -15,10 +15,15 @@
       <% end %>
       <div id="user_nav">
    			<% if current_user %>
-   				<%= link_to "Order", user_path(:current) %>
-     			<%= link_to "Edit profile", edit_user_path(:current) %>  
-     			<%= link_to "Logout", logout_path %>  
-     			<%= current_user.role %>
+   				<% if current_user.role == "client" %>
+   					<%= link_to "Root", root_url %>
+   					<%= link_to "Order", user_path(:current) %>
+     				<%= link_to "Edit profile", edit_user_path(:current) %> 
+     			<% end %> 
+     			<% if current_user.role == "admin" %>
+     				<%= link_to "Administration", nil %>
+     			<% end %>
+     			<%= link_to "Logout", logout_path %> 
      			
   			<% else %>  
      			<%= link_to "Register", new_user_path %>  

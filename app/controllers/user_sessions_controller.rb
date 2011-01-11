@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
     
     @user = current_user
     
-    if @user != nil
+    if @user != nil && @user.role == "client"
     
     	if @user.orders.last != nil && @user.orders.last.buy == false
     		@user.orders.delete(@user.orders.last)

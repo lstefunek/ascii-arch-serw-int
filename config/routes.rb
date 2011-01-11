@@ -1,20 +1,21 @@
-AsciiArchSerwInt::Application.routes.draw do |map|
+AsciiArchSerwInt::Application.routes.draw do
 
-	map.login 'login', :controller => 'user_sessions', :action => 'new'
+	match 'login', :controller => 'user_sessions', :action => 'new', :as => 'login'
 	
-	map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
+	match 'logout', :controller => 'user_sessions', :action => 'destroy', :as => 'logout'
 	
-	map.resources :user_sessions
-  map.resources :categories
+	resources :user_sessions
+  resources :categories
 	
-	map.resources :users do |m|
-		m.execute 'execute', :controller => 'users', :action => 'execute'
-		m.orderexecute 'orderexecute', :controller => 'users', :action => 'orderexecute'
+	resources :users do
+		match 'execute', :controller => 'users', :action => 'execute', :as => 'execute'
+		match 'orderexecute', :controller => 'users', :action => 'orderexecute', :as => "orderexecute"
 	end
 	
-	map.resources :products do |m|
-		m.add 'add', :controller => 'products', :action => 'add'
+	resources :products do
+		match 'add', :controller => 'users', :action => 'add', :as => 'add'
+		match 'removeproduct', :controller => 'users', :action => 'removeproduct', :as => 'removeproduct'
 	end
-	  
-  map.root :products
+	
+	root :to => 'products#index'
 end

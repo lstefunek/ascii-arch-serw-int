@@ -2,6 +2,7 @@
 
 Customer.create( :name => "Jan", :surname => "Kowalski", :town => "Księżyc", :zipcode => "??-???", :street => "Platon", :streetnumber => 1, :phone => "123-456-789" )
 User.create( :username => "jkowalski", :email => "jkowalski@moon.mo", :password => "pass", :password_confirmation => "pass", :customer => Customer.find(1) )
+User.create( :username => "admin", :email => "admin@ascii.pl", :password => "pass", :password_confirmation => "pass", :role => "admin" )
 
 Category.create( :name => "Oprogramowanie graficzne" )
 Category.create( :name => "Systemy operacyjne" )

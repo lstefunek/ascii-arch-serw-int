@@ -11,6 +11,7 @@ class Ability
   		else
   			can :read, :all
   			can :add, Product
+  			can :removeproduct, Product
   		end
   		
   	end

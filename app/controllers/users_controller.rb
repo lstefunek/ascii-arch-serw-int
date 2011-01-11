@@ -52,5 +52,48 @@ class UsersController < ApplicationController
   	
   	redirect_to @user
   end
+  
+	def add
+	
+		@user = current_user
+		
+		if @user.orders.last != nil
+  		@order = @user.orders.last
+  	else
+  		@order = Order.new
+  	end
+  		  	
+  	@orderlist = Orderlist.new
+  	@orderlist.order_id = @order.id
+  	@orderlist.product_id = params[:product_id]
+  	@order.orderlists << @orderlist
+  	@user.orders << @order
+  	
+  	@order.save
+  	@user.save
+  	
+  	redirect_to root_url
+  end
+  
+	def removeproduct
+		debugger
+  
+  	@productId = params[:product_id]
+  
+  	@user = current_user
+  	@order = @user.orders.last
+  	@orderlists = @order.orderlists
+  	
+  	@delete = []
+  	@delete << @orderlists.select { |p| p.product_id == @productId.to_i }
+  	
+  	@orderlists.delete @delete.first
+  	
+  	@order.save
+  	@user.save
+  	
+  	redirect_to @user
+  	
+  end
 
 end
