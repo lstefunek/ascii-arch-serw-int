@@ -9,6 +9,9 @@ Address:<br/>
 <h2>Order</h2>
 <ul>
 <% @user.orders.last.orderlists.each do |p| %>
-	<li><%= link_to Product.find(p.product_id).name, product_path(p.product_id) %></li>
+	<li><%= link_to Product.find(p.product_id).name, product_path(p.product_id) %> (<%= Product.find(p.product_id).price %> PLN)</li>
 <% end %>
 </ul>
+<% if @user.orders.last.orderlists.length > 0 %>
+	<%= link_to "Execute", user_execute_path(@user) %>
+<% end %>

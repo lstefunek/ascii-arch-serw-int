@@ -3,8 +3,6 @@ class CreateOrderlists < ActiveRecord::Migration
     create_table :orderlists do |t|
       t.integer :product_id
       t.integer :order_id
-      t.integer :position
-      t.datetime :created_at
 
       t.timestamps
     end

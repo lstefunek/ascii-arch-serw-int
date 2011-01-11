@@ -6,7 +6,11 @@ AsciiArchSerwInt::Application.routes.draw do |map|
 	
 	map.resources :user_sessions
   map.resources :categories
-	map.resources :users
+	
+	map.resources :users do |m|
+		m.execute 'execute', :controller => 'users', :action => 'execute'
+		m.orderexecute 'orderexecute', :controller => 'users', :action => 'orderexecute'
+	end
 	
 	map.resources :products do |m|
 		m.add 'add', :controller => 'products', :action => 'add'

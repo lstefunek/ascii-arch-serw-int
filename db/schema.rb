@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(:version => 20110111111700) do
   create_table "orderlists", :force => true do |t|
     t.integer  "product_id"
     t.integer  "order_id"
-    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

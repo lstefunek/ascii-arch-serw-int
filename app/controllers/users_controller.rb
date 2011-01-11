@@ -27,5 +27,30 @@ class UsersController < ApplicationController
   	@user.save
   	redirect_to root_url
   end
+  
+  def execute 	
+  	@user = current_user
+  	
+  	@sum = 0
+  	
+  	@user.orders.last.orderlists.each do |p|
+  		@sum += Product.find(p.product_id).price
+  	end
+  	
+  	respond_with @user, @sum
+  end
+  
+  def orderexecute
+  	@user = current_user
+  	@order = @user.orders.last
+  	
+  	@order.buy = true
+  	@user.orders << Order.new
+  	
+  	@order.save
+  	@user.save
+  	
+  	redirect_to @user
+  end
 
 end

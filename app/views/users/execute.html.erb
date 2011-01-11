@@ -1,0 +1,21 @@
+<h1>Execute order</h1>
+
+<h2>User details</h2>
+Name: <%= @user.customer.name %><br/>
+Surname: <%= @user.customer.surname %><br/>
+Phone: <%= @user.customer.phone %><br/>
+Address:<br/>
+<%= @user.customer.town %>, <%= @user.customer.zipcode %><br/>
+<%= @user.customer.street %> <%= @user.customer.streetnumber %><%= '/' + @user.customer.housenumber.to_s if @user.customer.housenumber %><br/>
+
+<h2>Order info</h2>
+<ul>
+<% @user.orders.last.orderlists.each do |p| %>
+	<li><%= Product.find(p.product_id).name %> (<%= Product.find(p.product_id).price %> PLN)</li>
+<% end %>
+</ul>
+
+All: <%= @sum %> PLN<br/>
+<br/>
+
+<%= link_to "Execute order", user_orderexecute_path(@user) %>

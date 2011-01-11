@@ -10,12 +10,16 @@ class UserSessionsController < ApplicationController
     
     @user = current_user
     
-    if @user.orders.last != nil && @user.orders.last.buy == false
-    	@user.orders.delete(@user.orders.last)
-    end
+    if @user != nil
     
-    @user.orders << Order.new
-    @user.save
+    	if @user.orders.last != nil && @user.orders.last.buy == false
+    		@user.orders.delete(@user.orders.last)
+    	end
+    
+    	@user.orders << Order.new
+    	@user.save
+    
+    end
     
     redirect_to root_url
   end

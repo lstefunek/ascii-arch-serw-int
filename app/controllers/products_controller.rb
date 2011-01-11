@@ -71,7 +71,7 @@ class ProductsController < ApplicationController
   	@order.save
   	@user.save
   	
-  	redirect_to @user
+  	redirect_to root_url
   end
  
 end
