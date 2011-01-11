@@ -1,0 +1,14 @@
+<h2>User data</h2>
+
+Username: <%= @user.username %><br/>
+Phone: <%= @user.customer.phone %><br/>
+Address:<br/>
+<%= @user.customer.zipcode %> <%= @user.customer.town %><br/>
+<%= @user.customer.street %> <%= @user.customer.streetnumber %> <%= @user.customer.housenumber if @user.customer.housenumber %>
+
+<h2>Order</h2>
+<ul>
+<% @user.orders.last.orderlists.each do |p| %>
+	<li><%= link_to Product.find(p.product_id).name, product_path(p.product_id) %></li>
+<% end %>
+</ul>

@@ -32,23 +32,6 @@ ActiveRecord::Schema.define(:version => 20110111111700) do
     t.datetime "updated_at"
   end
 
-  create_table "orderinfos", :force => true do |t|
-    t.integer  "customer_id"
-    t.datetime "dateplaced"
-    t.datetime "dateshipped"
-    t.float    "shipping"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "orderlines", :id => false, :force => true do |t|
-    t.integer  "orderinfo_id"
-    t.integer  "product_id"
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "orderlists", :force => true do |t|
     t.integer  "product_id"
     t.integer  "order_id"
@@ -58,7 +41,8 @@ ActiveRecord::Schema.define(:version => 20110111111700) do
   end
 
   create_table "orders", :force => true do |t|
-    t.integer  "customer_id"
+    t.boolean  "buy",        :default => false
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -88,7 +72,7 @@ ActiveRecord::Schema.define(:version => 20110111111700) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.string   "role"
+    t.string   "role",              :default => "client"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

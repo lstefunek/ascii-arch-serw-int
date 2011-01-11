@@ -11,6 +11,11 @@ class UsersController < ApplicationController
     redirect_to root_url
   end
   
+  def show
+  	@user = current_user
+  	respond_with @user
+  end
+  
   def edit
   	@user = current_user
   	@customer = Customer.find @user.customer

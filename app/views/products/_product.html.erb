@@ -1,4 +1,9 @@
 <p>
-	<%= link_to product.name, product_path(product) %> (<%= product.price %> zł)<br/>
+	<%= link_to product.name, product_path(product) %> (<%= product.price %> zł)
+	<% if current_user %>
+		| <%= link_to "Add", product_add_path(product) %>
+	<% end %>
+	
+	<br/>
   <%= image_tag product.photo.url(:small) %>
 </p>
