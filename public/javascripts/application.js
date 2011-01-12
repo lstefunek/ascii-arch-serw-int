@@ -3,7 +3,9 @@
 
 
 
-$('#user_nav').css("background-color","#999999");
+$(document).ready(function() {
+	$('#user_nav').css("background-color","#999999");
+});
 
 
 
