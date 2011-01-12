@@ -4,7 +4,15 @@
 
 
 $(document).ready(function() {
-	$('#user_nav').css("background-color","#999999");
+
+	$('#user_nav').css("background-color","#EEEEEE");
+	$('#user_nav').mouseover(function() {
+	  $(this).css("background-color","#AAAAAA");
+	});
+	$('#user_nav').mouseout(function() {
+	  $(this).css("background-color","#EEEEEE");
+	});
+		
 });
 
 
