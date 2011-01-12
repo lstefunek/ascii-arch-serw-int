@@ -1,0 +1,17 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Products count</th>
+    <th>Actions</th>
+  </tr>
+
+<% @categories.each do |c| %>
+  <tr>
+  	<td><%= c.name %></td>
+  	<td><%= c.products.length %>
+    <td><%= link_to 'Show', c %> <%= link_to 'Edit', edit_category_path(c) %> <%= link_to 'Destroy', c, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -4,6 +4,11 @@ AsciiArchSerwInt::Application.routes.draw do
 	
 	match 'logout', :controller => 'user_sessions', :action => 'destroy', :as => 'logout'
 	
+	match 'admin/products', :controller => 'administration', :action => 'products', :as => 'products'
+	match 'admin/categories', :controller => 'administration', :action => 'categories', :as => 'categories'
+	match 'admin/users', :controller => 'administration', :action => 'users', :as => 'users'
+	match 'admin/orders', :controller => 'administration', :action => 'orders', :as => 'orders'
+	
 	resources :user_sessions
   resources :categories
 	

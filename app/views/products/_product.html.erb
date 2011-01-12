@@ -1,6 +1,6 @@
 <p>
 	<%= link_to product.name, product_path(product) %> (<%= product.price %> zł)
-	<% if current_user && product.count > 0 %>
+	<% if current_user && current_user.role == "client" && product.count > 0 %>
 		| <%= link_to "Add", product_add_path(product) %>
 	<% end %>
 	

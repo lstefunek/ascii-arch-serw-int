@@ -48,6 +48,10 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1.xml
   def destroy
     @category = Category.find(params[:id])
+    @category.products.each do |p|
+    	@pro = Product.find p.id
+    	@pro.destroy
+    end
     @category.destroy
     respond_with(@category)
   end

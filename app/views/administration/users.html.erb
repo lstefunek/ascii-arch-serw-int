@@ -1,0 +1,37 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>E-mail</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Phone</th>
+    <th>Town</th>
+    <th>Zipcode</th>
+    <th>Street</th>
+    <th>Street number</th>
+    <th>House number</th>
+    <th>Order count</th>
+    <th>Actions</th>
+  </tr>
+
+<% @users.each do |u| %>
+	<% if u.role == "client" %>
+  	<tr>
+  		<td><%= u.username %></td>
+  		<td><%= u.email %></td>
+  		<td><%= u.customer.name %></td>
+  		<td><%= u.customer.surname %></td>
+  		<td><%= u.customer.phone %></td>
+  		<td><%= u.customer.town %></td>
+  		<td><%= u.customer.zipcode %></td>
+  		<td><%= u.customer.street %></td>
+  		<td><%= u.customer.streetnumber %></td>
+  		<td><%= u.customer.housenumber %></td>
+  		<td><%= u.orders.length %></td>
+    	<td><%= link_to 'Destroy', u, :confirm => 'Are you sure?', :method => :delete %></td>
+  	</tr>
+  <% end %>
+<% end %>
+</table>

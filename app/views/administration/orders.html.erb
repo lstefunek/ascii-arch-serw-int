@@ -1,0 +1,23 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Product list</th>
+    <th>Money</th>
+  </tr>
+
+<% @orders.each do |o| %>
+	<% if o.buy == true %>
+  	<tr>
+  		<td><%= User.find(o.user_id).customer.name + ' ' + User.find(o.user_id).customer.surname %></td>
+  		<td>
+  			<% o.products.each do |p| %>
+  				<%= p.name %><br/>
+  			<% end %>
+  		</td>
+  		<td><%= o.price %> PLN</th>
+  	</tr>
+  <% end %>
+<% end %>
+</table>

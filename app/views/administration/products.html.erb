@@ -1,0 +1,23 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Body</th>
+    <th>Price</th>
+    <th>Count</th>
+    <th>Category</th>
+    <th>Actions</th>
+  </tr>
+
+<% @products.each do |p| %>
+  <tr>
+  	<td><%= p.name %></td>
+  	<td><%= p.body %></td>
+		<td><%= p.price %></td>
+		<td><%= p.count %></td>
+		<td><%= Category.find(p.category).name %></td>
+    <td><%= link_to 'Show', p %> <%= link_to 'Edit', edit_product_path(p) %> <%= link_to 'Destroy', p, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
