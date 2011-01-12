@@ -24,12 +24,14 @@ $(document).ready(function() {
 	
 	try {
 		//$('#products>img').css("border-color","#222222");
-		$('#products>img').css("border","1px solid #666666");
+		//$('#products>img').css("border","1px solid #666666");
 		$('#products>img').mouseover(function() {
-		  $(this).css("color","#FAFAFA");
+			$(this).css("border","1px solid #666666");
+		  $(this).css("background-color","#EEEEEE");
 		});
 		$('#products>img').mouseout(function() {
-		  $(this).css("color","#FFFFFF");
+			$(this).css("border","0px solid #666666");
+		  $(this).css("background-color","#FFFFFF");
 		});
 	} catch (err) {}
 	
