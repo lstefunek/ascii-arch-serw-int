@@ -53,6 +53,15 @@ $(document).ready(function() {
 		});
 	} catch (err) {}
 	
+	try {
+                $('tr').mouseover(function() {
+                  $(this).css("background-color","#FFFFFF");
+                });
+                $('tr').mouseout(function() {
+                  $(this).css("background-color","#EFEFEF");
+                });
+        } catch (err) {}
+
 	
 		
 });
