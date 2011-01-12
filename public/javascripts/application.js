@@ -35,6 +35,24 @@ $(document).ready(function() {
 		});
 	} catch (err) {}
 	
+	try {
+		$('#table').mouseover(function() {
+		  $(this).css("background-color","#F0F0F0");
+		});
+		$('#table').mouseout(function() {
+		  $(this).css("background-color","#FAFAFA");
+		});
+	} catch (err) {}
+	
+	try {
+		$('#td').mouseover(function() {
+		  $(this).css("background-color","#FFFFFF");
+		});
+		$('#td').mouseout(function() {
+		  $(this).css("background-color","#EFEFEF");
+		});
+	} catch (err) {}
+	
 	
 		
 });
