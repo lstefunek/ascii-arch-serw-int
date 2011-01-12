@@ -3,10 +3,19 @@ body {
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
+body:hover {
+  background-color: #4B7355;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
 
 a img {
   border: none;
 }
+a img:hover {
+  border: 2px solid #666666;
+}
+
 
 a {
   color: #0000FF;
