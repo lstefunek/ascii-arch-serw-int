@@ -17,5 +17,4 @@ group :development do
   gem 'wirble'
   gem 'hirb'
   gem 'jquery-rails'
-  gem "ruby-debug19"
 end
